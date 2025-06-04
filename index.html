@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Spark - Inspirational Quotes</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4f8cff">
+  <!-- Place icon-192.png and icon-512.png in the root directory for PWA installability -->
+</head>
+<body>
+  <div class="container">
+    <h1>Mood Spark</h1>
+    <p class="subtitle">Get a spark of inspiration tailored to your mood!</p>
+    <label for="category-select">Choose a mood or theme:</label>
+    <select id="category-select"></select>
+    <div id="category-icon"></div>
+    <div id="quote-box">
+      <p id="quote-text">Select a category to see a quote.</p>
+    </div>
+    <button id="next-quote" disabled>Next Quote</button>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html> 

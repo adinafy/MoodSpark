@@ -1,0 +1,21 @@
+{
+  "name": "Mood Spark - Inspirational Quotes",
+  "short_name": "Mood Spark",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f6f8fc",
+  "theme_color": "#4f8cff",
+  "description": "Get daily inspirational quotes by mood, offline!",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+} 

@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f6f8fc;
+  color: #333;
+}
+
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2rem 1.5rem 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.2em;
+  color: #4f8cff;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5em;
+  color: #6a7ba2;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 0.5em;
+}
+
+#category-select {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  border: 1px solid #cfd8dc;
+  margin-bottom: 1.5em;
+  width: 100%;
+  max-width: 250px;
+}
+
+#quote-box {
+  background: #e3f0ff;
+  border-radius: 12px;
+  padding: 1.2em 1em;
+  margin-bottom: 1.5em;
+  min-height: 80px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #2d3a4a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#next-quote {
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 2em;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#next-quote:disabled {
+  background: #b3d1ff;
+  cursor: not-allowed;
+}
+
+#next-quote:not(:disabled):hover {
+  background: #2563eb;
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  #quote-box {
+    font-size: 1rem;
+    min-height: 60px;
+  }
+}
+
+/* Fade-in animation for quote text */
+.fade-in {
+  animation: fadeIn 0.6s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation for category dropdown when chosen */
+#category-select.category-animate {
+  animation: categorySelectPop 0.5s;
+}
+
+@keyframes categorySelectPop {
+  0% {
+    transform: scale(1);
+    background: #e3f0ff;
+    border-color: #4f8cff;
+  }
+  40% {
+    transform: scale(1.15);
+    background: #b3d1ff;
+    border-color: #2563eb;
+  }
+  100% {
+    transform: scale(1);
+    background: #fff;
+    border-color: #cfd8dc;
+  }
+}
+
+#category-icon {
+  font-size: 2.5rem;
+  text-align: center;
+  height: 3.2rem;
+  margin-bottom: 0.5em;
+  line-height: 3.2rem;
+  user-select: none;
+}
+
+.icon-bounce {
+  animation: iconBounce 0.7s;
+}
+
+@keyframes iconBounce {
+  0%   { transform: scale(1) translateY(0); }
+  30%  { transform: scale(1.2) translateY(-10px); }
+  50%  { transform: scale(0.95) translateY(0); }
+  70%  { transform: scale(1.1) translateY(-5px); }
+  100% { transform: scale(1) translateY(0); }
+} 
